@@ -1,0 +1,89 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Commander",
+      "email": "user@example.com",
+      "role": "admin",
+      "joinedDate": "2024-01-01T00:00:00.000Z",
+      "vipExpiry": "2025-01-01T00:00:00.000Z",
+      "freeUsageCount": 0
+    }
+  ],
+  "strategies": [
+    {
+      "id": "1",
+      "name": "RSI Breakout",
+      "description": "Detects oversold/overbought conditions with momentum confirmation.",
+      "indicators": ["RSI", "Volume"],
+      "timeframe": "1h",
+      "riskLevel": "Medium",
+      "winRate": "68",
+      "profitFactor": "1.8",
+      "maxDrawdown": "12%",
+      "avgDuration": "14h",
+      "complexity": "Intermediate",
+      "indicatorLogic": "RSI(14) breakout logic",
+      "bestMarketCondition": "Trending"
+    },
+    {
+      "id": "2",
+      "name": "Golden Cross Institutional",
+      "description": "Analyzes major moving average crossovers (50/200) for trend inception.",
+      "indicators": ["SMA 50", "SMA 200"],
+      "timeframe": "4h",
+      "riskLevel": "Low",
+      "winRate": "75",
+      "profitFactor": "2.4",
+      "maxDrawdown": "8%",
+      "avgDuration": "3d",
+      "complexity": "Professional",
+      "indicatorLogic": "Golden Cross (50/200)",
+      "bestMarketCondition": "Bullish"
+    }
+  ],
+  "bots": [
+    {
+      "id": "1",
+      "name": "Alpha Grid Master",
+      "description": "Grid trading bot capitalizing on sideways market volatility.",
+      "strategy": "Grid Trading",
+      "market": "Spot",
+      "exchange": "Binance",
+      "status": "inactive",
+      "performance": {
+        "roi": 12.5,
+        "winRate": 92,
+        "totalTrades": 1450,
+        "profit": 345.20,
+        "history": []
+      },
+      "config": {
+        "pair": "BTC/USDT",
+        "amount": 1000
+      }
+    }
+  ],
+  "wallets": [
+    {
+      "address": "0x71C765...d897",
+      "label": "Whale Master Alpha",
+      "balance": "$84,500,000",
+      "pnlTotal": "+$18.4M",
+      "winRate": "88%",
+      "lastActivity": "1m ago",
+      "riskProfile": "Aggressive",
+      "recentTrades": []
+    }
+  ],
+  "alerts": [
+    {
+      "id": "1",
+      "symbol": "BTC",
+      "type": "Price",
+      "message": "Bitcoin crossed $65,000",
+      "timestamp": "2024-03-20T10:00:00.000Z",
+      "severity": "info"
+    }
+  ]
+}

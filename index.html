@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رادار ALPHA | المحرك العصبي المحلي</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        cyan: {
+                            400: '#00f3ff',
+                            500: '#00d0db',
+                            600: '#00a8b0',
+                        },
+                        emerald: {
+                            400: '#00ff9d',
+                            500: '#00db86',
+                        },
+                        rose: {
+                            400: '#ff0055',
+                            500: '#db0049',
+                        },
+                        purple: {
+                            400: '#bd00ff',
+                            500: '#a200db',
+                        },
+                        gray: {
+                            900: '#020408',
+                            800: '#0a0f18',
+                            700: '#151a25',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Tajawal', 'sans-serif'],
+                        tech: ['Rajdhani', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/index.css">
+    <style>
+        :root {
+            --bg-dark: #020408;
+            --panel-dark: #0a0f18;
+            --accent-cyan: #00f3ff;
+            --accent-emerald: #00ff9d;
+            --accent-rose: #ff0055;
+            --accent-purple: #bd00ff;
+            
+            /* Light mode defaults (overridden by dark mode usually) */
+            --bg-primary: #020408;
+            --panel-bg: rgba(10, 15, 24, 0.7);
+            --panel-border: rgba(0, 243, 255, 0.1);
+            --text-primary: #eaecef;
+        }
+        
+        :root.dark {
+            --bg-primary: #020408;
+            --panel-bg: rgba(10, 15, 24, 0.7);
+            --panel-border: rgba(0, 243, 255, 0.1);
+            --text-primary: #eaecef;
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            overflow: hidden;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #05080c;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1a2332;
+            border-radius: 10px;
+            border: 1px solid #00f3ff33;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent-cyan);
+            box-shadow: 0 0 10px var(--accent-cyan);
+        }
+
+        /* Text Glow */
+        .glow-text-cyan { text-shadow: 0 0 15px rgba(0, 243, 255, 0.6); }
+        .glow-text-emerald { text-shadow: 0 0 15px rgba(0, 255, 157, 0.6); }
+        .glow-text-rose { text-shadow: 0 0 15px rgba(255, 0, 85, 0.6); }
+        .glow-text-purple { text-shadow: 0 0 15px rgba(189, 0, 255, 0.6); }
+        
+        /* Glassmorphism Neon */
+        .glass-panel {
+            background: rgba(10, 15, 24, 0.6);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(0, 243, 255, 0.1);
+            box-shadow: 0 0 30px rgba(0, 243, 255, 0.05);
+        }
+        
+        .glass-panel:hover {
+            border-color: rgba(0, 243, 255, 0.3);
+            box-shadow: 0 0 40px rgba(0, 243, 255, 0.15);
+        }
+
+        .font-tech {
+            font-family: 'Rajdhani', sans-serif;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://esm.sh/@google/genai@^1.41.0",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "lucide-react": "https://esm.sh/lucide-react@^0.574.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>

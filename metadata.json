@@ -1,0 +1,8 @@
+{
+  "name": "رادار التداول الاحترافي AI",
+  "description": "Advanced AI-powered technical analysis platform for digital assets, featuring smart alerts and pre-built strategies.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
